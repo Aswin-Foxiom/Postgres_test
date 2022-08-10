@@ -7,9 +7,9 @@ from .models import *
 def Index(request):
     count = 0
 
-    Test.objects.create(name="Name" + count)
+    Test.objects.create(name= "Name" )
     count = count + 1
-    return HttpResponse("Name" + count)
+    return HttpResponse(count)
 
 def Shows(request):
     datas = Test.objects.all()
